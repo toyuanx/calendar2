@@ -17,28 +17,28 @@ class Admin extends DB_Connect {
 
     public function displayLoginForm() {
         return <<<LOGINFORM
-		<div id="login-area">
-			<form action="assets/inc/process.inc.php" method="post">
-				<h3>请登录</h3>			
-				<table border="0" cellspacing="0" cellpadding="0">
-					<tr>
-						<td>账号</td>
-						<td><input type="text" name="uname" id="uname" value="" /></td>
-					</tr>
-					<tr>
-						<td>密码</td>
-						<td><input type="password" name="pword" id="pword" value="" /></td>
-					</tr>
-					<tr>
-						<td colspan="2">
-							<input type="submit" name="login_submit" value=" 登 录 " class="btn btn-primary" />&nbsp;&nbsp;<a href="./" class="btn">取消</a>
-						</td>
-					</tr>									
-				</table>
-				<input type="hidden" name="token" value="$_SESSION[token]" />
-				<input type="hidden" name="action" value="user_login" />
-			</form>
-		</div>	
+        <div id="login-area">
+            <form action="assets/inc/process.inc.php" method="post">
+                <h3>请登录</h3>			
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>账号</td>
+                        <td><input type="text" name="uname" id="uname" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>密码</td>
+                        <td><input type="password" name="pword" id="pword" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" name="login_submit" value=" 登 录 " class="btn btn-primary" />&nbsp;&nbsp;<a href="./" class="btn">取消</a>
+                        </td>
+                    </tr>									
+                </table>
+                <input type="hidden" name="token" value="$_SESSION[token]" />
+                <input type="hidden" name="action" value="user_login" />
+            </form>
+        </div>	
 LOGINFORM;
     }
 
@@ -54,7 +54,6 @@ LOGINFORM;
             $stmt->bindParam(':uname', $uname, PDO::PARAM_STR);
             $stmt->execute();
             $user = array_shift($stmt->fetchAll());
-            //array_shift() 函数的用法，我查了PHP手册后十分惊讶，原来array_shift() 的返回值是实参数组中的第一个元素
             $stmt->closeCursor();
         } catch (Exception $e) {
             die($e->getMessage());
