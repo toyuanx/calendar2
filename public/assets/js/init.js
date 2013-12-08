@@ -10,15 +10,15 @@ jQuery(function($) {
                 "addevent": function(data, formData) {
                     // Converts the query string to an object
                     var entry = $.fx.deserialize(formData),
-                            cal = new Date(NaN),
-                            // Makes a date object for the new event
-                            event = new Date(NaN),
-                            // Extracts the calendar month from the H2 ID
-                            cdata = $("h2").attr("id").split('-'),
-                            // Extracts the event day, month, and year
-                            date = entry.event_start.split(' ')[0],
-                            // Splits the event data into pieces
-                            edata = date.split('-');
+                        cal = new Date(NaN),
+                        // Makes a date object for the new event
+                        event = new Date(NaN),
+                        // Extracts the calendar month from the H2 ID
+                        cdata = $("h2").attr("id").split('-'),
+                        // Extracts the event day, month, and year
+                        date = entry.event_start.split(' ')[0],
+                        // Splits the event data into pieces
+                        edata = date.split('-');
 
                     // Sets the date for the calendar date object
                     cal.setFullYear(cdata[1], cdata[2], 1);
@@ -47,18 +47,17 @@ jQuery(function($) {
                                 .fadeIn("slow");
                     }
                 },
-                "editevent": function(data, formData) {
-                    //
+                "editevent": function(data, formData) {                
                     var entry = $.fx.deserialize(formData),
-                            cal = new Date(NaN),
-                            // Makes a date object for the new event
-                            event = new Date(NaN),
-                            // Extracts the calendar month from the H2 ID
-                            cdata = $("h2").attr("id").split('-'),
-                            // Extracts the event day, month, and year
-                            date = entry.event_start.split(' ')[0],
-                            // Splits the event data into pieces
-                            edata = date.split('-');
+                        cal = new Date(NaN),
+                        // Makes a date object for the new event
+                        event = new Date(NaN),
+                        // Extracts the calendar month from the H2 ID
+                        cdata = $("h2").attr("id").split('-'),
+                        // Extracts the event day, month, and year
+                        date = entry.event_start.split(' ')[0],
+                        // Splits the event data into pieces
+                        edata = date.split('-');
 
                     // Sets the date for the calendar date object
                     cal.setFullYear(cdata[1], cdata[2], 1);
@@ -131,10 +130,9 @@ jQuery(function($) {
                 // Make sure the content of modal window must be removed
                 $('.modal-window-content').children().remove();
                 $.fx.boxin(null, modalWindow, modalOverlay);
-                form
-                        .appendTo(modalWindowContent)
-                        .addClass("edit-form")
-                        .fadeIn("slow");
+                form.appendTo(modalWindowContent)
+                    .addClass("edit-form")
+                    .fadeIn("slow");
             },
             error: function(msg) {
                 alert(msg);
@@ -149,11 +147,11 @@ jQuery(function($) {
 
         // Serializes the form data for use with $.ajax()
         var formData = $('.edit-form').serialize(),
-                // Stores the value of the submit button
-                submitVal = $(this).val(),
-                remove = false,
-                start = $(this).siblings("[name=event_start]").val(),
-                end = $(this).siblings("[name=event_end]").val();
+            // Stores the value of the submit button
+            submitVal = $(this).val(),
+            remove = false,
+            start = $(this).siblings("[name=event_start]").val(),
+            end = $(this).siblings("[name=event_end]").val();
 
         // If this is the deletion form, appends an action
         if ($(this).attr("name") == "confirm_delete") {

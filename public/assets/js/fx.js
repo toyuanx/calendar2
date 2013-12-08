@@ -32,7 +32,7 @@
                         fx.boxout(event);
                     })
                     .appendTo("body");
-      },
+        },
         "boxin": function(data, modalWindow, modalOverlay) {
             var leftFix = $(window).width() / 2 - modalWindow.width() / 2;
             modalWindow
