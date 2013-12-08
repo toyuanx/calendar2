@@ -1,0 +1,41 @@
+.modal-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	display:block;
+	z-index: 1100;
+}
+
+.modal-window {
+	position: absolute;
+	top: 140px;
+	left: 50%;
+	width: 400px;
+	height: auto;
+	padding: 20px;
+	border: 1px solid #000;
+	background-color: #FFF;
+	z-index: 1101;
+	border: 4px solid #777;
+}
+
+.modal-window-close {
+	cursor: pointer;
+	position: absolute;
+	display: block;
+	top: -13px;
+	right: -13px;
+	width: 12px;
+	height: 12px;
+	text-indent: -9999em;
+	background: url("../images/modal-window-close.gif") no-repeat scroll 0% 0% transparent;
+	outline: 0;
+	z-index: 1103;
+}
+
+.modal-overlay-ie{
+	background-color: #777;
+}
