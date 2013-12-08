@@ -109,7 +109,7 @@ jQuery(function($) {
         });
     });
 
-    // Displays the edit form as a modal window,这里必须要用live()，而不是bind()绑定事件，为什么？我也说不出所以然。
+    // Displays the edit form as a modal window
     $(".admin-options form,.admin").live("click", function(event) {
         // Prevents the form from submitting
         event.preventDefault();
