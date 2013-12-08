@@ -1,14 +1,15 @@
 <?php
+
 // Include necessary files
-	error_reporting(E_ERROR | E_WARNING | E_PARSE);
-	@set_time_limit(1000);
-	@set_magic_quotes_runtime(0);
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+@set_time_limit(1000);
+@set_magic_quotes_runtime(0);
 include_once '../sys/core/init.inc.php';
 // Load the admin object
 $obj = new Admin($dbo);
 // Generate a salted hash of "admin"
 $pass = $obj->testSaltedHash("nihao123!");
-echo 'Hash of "nihao123!":<br />'.$pass."<br /><br />";
+echo 'Hash of "nihao123!":<br />' . $pass . "<br /><br />";
 
 // Load a hash of the word test and output it
 $hash1 = $obj->testSaltedHash("test");
