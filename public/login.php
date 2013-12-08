@@ -1,6 +1,6 @@
 <?php
 /*
- * Created on 2012-4-25 by xiongxuebing
+ * Created on 2012-4-25 by weiwei
  */
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 @set_time_limit(1000);

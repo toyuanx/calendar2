@@ -1,6 +1,6 @@
 <?php
 /*
- * Created on 2012-4-24 by xiongxuebing
+ * Created on 2012-4-24 by weiwei
  */
 include_once '../sys/core/init.inc.php';
 /*
